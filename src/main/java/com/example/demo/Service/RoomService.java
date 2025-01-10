@@ -24,4 +24,9 @@ public class RoomService {
     public void postRoom(Room room) {
         roomRepository.save(room);
     }
+
+    public Room getRoomByName(String name) {
+       return roomRepository.findByRoomName(name).orElseThrow(() -> new RuntimeException("Room not found"));
+    }
+
 }

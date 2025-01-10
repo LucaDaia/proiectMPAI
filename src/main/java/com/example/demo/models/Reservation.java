@@ -1,11 +1,24 @@
 package com.example.demo.models;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Entity
+@Table
 public class Reservation {
-
-    private static int idReservation;
+    @Id
+    @SequenceGenerator(
+            name = "reservation_sequence",
+            sequenceName = "reservation_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "reservation_sequence"
+    )
+    private int idReservation;
     private int idRoom;
     private int idUser;
     private LocalTime startDate;
