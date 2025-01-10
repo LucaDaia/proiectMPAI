@@ -14,8 +14,4 @@ public class DemoApplication { //localhost:8080/a
 		System.out.println("Pula");
 	}
 
-	@GetMapping
-	public String ceva() {
-		return "Ana o suge tanc";
-	}
 }
