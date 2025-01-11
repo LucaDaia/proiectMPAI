@@ -33,7 +33,7 @@ public class ReservationController {
 
     //we need to add request paramters for this to work
     //date format should be YYYY-MM-DD
-    @GetMapping("/search")
+    @GetMapping("/searchReservation")
     public List<Reservation> getReservationByDateAndRoomId(@RequestParam String date, @RequestParam Integer roomId) {
         LocalDate dateUpdated = LocalDate.parse(date);
         return reservationService.getReservationByDateAndRoomId(dateUpdated, roomId);

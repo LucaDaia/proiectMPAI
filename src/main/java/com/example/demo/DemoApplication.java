@@ -11,7 +11,11 @@ public class DemoApplication { //localhost:8080/a
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		System.out.println("Pula");
+		System.out.println("Luca");
 	}
 
+	@GetMapping
+	public String ceva() {
+		return "Ana are mere";
+	}
 }

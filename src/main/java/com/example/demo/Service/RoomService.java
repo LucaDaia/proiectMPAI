@@ -29,4 +29,7 @@ public class RoomService {
        return roomRepository.findByRoomName(name).orElseThrow(() -> new RuntimeException("Room not found"));
     }
 
+    public Room getRoomById(Integer id){
+        return roomRepository.findById(id).orElseThrow(()-> new RuntimeException("Room noy found"));
+    }
 }
