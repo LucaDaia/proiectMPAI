@@ -2,6 +2,7 @@ package com.example.demo.Service;
 
 import com.example.demo.models.Reservation;
 import com.example.demo.repository.ReservationRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,7 @@ public class ReservationService {
         return reservationRepository.findReservationsByDateAndRoomId(date, idRoom);
     }
 
+    @Transactional
     public void postReservation(Reservation reservation) {
         reservationRepository.save(reservation);
     }

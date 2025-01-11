@@ -15,7 +15,7 @@ public interface ReservationRepository extends JpaRepository<Reservation, Intege
 
     Optional<Reservation> findByIdReservation(Integer id);
 
-    @Query("SELECT r FROM Reservation r WHERE r.date = :reservationDate AND r.idRoom = :idRoom")
-    List<Reservation> findReservationsByDateAndRoomId(@Param("date") LocalDate reservationDate, @Param("idRoom") Integer idRoom);
+    @Query("SELECT r FROM Reservation r WHERE r.date = :date AND r.idRoom = :idRoom")
+    List<Reservation> findReservationsByDateAndRoomId(@Param("date") LocalDate date, @Param("idRoom") Integer idRoom);
 
 }

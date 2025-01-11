@@ -40,4 +40,54 @@ public class Reservation {
         this.endDate = LocalTime.now();
         this.date = LocalDate.now();
     }
+
+
+
+    public int getIdReservation() {
+        return idReservation;
+    }
+
+    public void setIdReservation(int idReservation) {
+        this.idReservation = idReservation;
+    }
+
+    public int getIdRoom() {
+        return idRoom;
+    }
+
+    public void setIdRoom(int idRoom) {
+        this.idRoom = idRoom;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
+    public LocalTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalTime endDate) {
+        this.endDate = endDate;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 }

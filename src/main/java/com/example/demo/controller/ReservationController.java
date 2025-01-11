@@ -41,6 +41,7 @@ public class ReservationController {
 
     @PostMapping
     public void postReservation(@RequestBody Reservation reservation) {
+        System.out.println("Received reservation: " + reservation);
         reservationService.postReservation(reservation);
     }
 
