@@ -3,8 +3,8 @@ package com.example.demo.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table
-public class User implements UserInterface {
+@Table(name = "app_user") // Renames the table to "app_user"
+public class User {
     @Id
     @SequenceGenerator(
             name = "user_sequence",
@@ -39,7 +39,6 @@ public class User implements UserInterface {
         return mail;
     }
 
-
     public void setIdUser(int idUser) {
         this.idUser = idUser;
     }
@@ -52,10 +51,4 @@ public class User implements UserInterface {
         this.mail = mail;
     }
 
-
-
-    @Override
-    public boolean reserveRoom() {
-        return false;
-    }
 }
